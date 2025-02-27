@@ -2,19 +2,15 @@
   "name": "AgentGPT Dev",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    },
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "8"
-    }
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
   },
-  "postCreateCommand": "npm install && npx prisma generate",
+  "postCreateCommand": "npm install",
   "customizations": {
     "vscode": {
-      "settings": {
-        "editor.formatOnSave": true
-      }
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
     }
   }
 }
